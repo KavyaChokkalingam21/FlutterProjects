@@ -1,0 +1,36 @@
+# Flutter Comments App
+
+A commenting system built with **Flutter** (frontend) and **FastAPI** (backend) with **SQLite** as the database.  
+Users can select text in a paragraph, click a floating “Add Comment” button, and see the comment highlighted inline. 
+Comments will be stored in the database and are listed below the paragraph.
+
+---
+
+## Features
+
+- Click-and-drag to select text in a paragraph.
+- Floating **“Add Comment”** button appears near the selected text.
+- Highlights selected text with comments in yellow.
+- Stores comments with `start_index`, `end_index`, `selected_text`, and `user_name`.
+- Backend API with FastAPI:
+  - `POST /comments` → Add a comment
+  - `GET /comments?paragraph_id=1` → Fetch all comments for a paragraph
+- Supports multiple comments per paragraph.
+- Fully responsive frontend using Flutter Web or Desktop.
+
+---
+
+## Project Structure
+
+flutter_comments_app/
+├─ backend/
+│ ├─ main.py # FastAPI backend
+│ ├─ requirements.txt # Python dependencies
+│ └─ comments.db # SQLite DB (auto-created)
+├─ flutter_app/
+│ ├─ lib/
+│ │ └─ main.dart # Flutter frontend
+│ ├─ pubspec.yaml # Flutter dependencies
+│ └─ build/ # Flutter build outputs (ignored in Git)
+└─ README.md
+

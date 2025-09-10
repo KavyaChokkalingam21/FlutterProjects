@@ -1,0 +1,24 @@
+Backend Setup
+1. Navigate to the backend folder
+2. python -m venv venv
+venv\Scripts\activate (For Windows)
+3. pip install -r requirements.txt
+4. uvicorn main:app --reload --host 127.0.0.1 --port 8000
+5. Test the API in your browser:
+API docs: http://127.0.0.1:8000/docs
+For Example: GET all comments for paragraph 1:
+
+http://127.0.0.1:8000/comments?paragraph_id=1
+
+Frontend Setup
+1. Navigate to the frontend folder
+2. Install dependcies
+flutter pub get
+3. Run the app
+flutter run -d chrome (To run in chrome)
+flutter run -d edge (To run in edge)
+
+Note
+Make sure the backend is running before starting the Flutter frontend, or comments will not load.
+SQLite DB (comments.db) is automatically created when the backend runs.
+
