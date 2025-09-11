@@ -51,11 +51,12 @@ class CommentPage extends StatefulWidget {
 }
 
 class _CommentPageState extends State<CommentPage> {
-  final String paragraph =
-      "HI!!, This is Kavya Chokkalingam.
+  final String paragraph = """
+      HI!!, This is Kavya Chokkalingam.
       I made this Flutter Application.
       This is a sample paragraph. 
-      You can select any part of this text and add a comment to check.";
+      You can select any part of this text and add a comment to check.
+      """;
   final TextEditingController _commentController = TextEditingController();
   List<Comment> comments = [];
 
